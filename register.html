@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Create account — Nexora</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body class="auth-page">
+<div class="auth-shell">
+  <a class="brand auth-brand" href="index.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="auth-card">
+    <div class="auth-heading"><span class="kicker">GET STARTED</span><h1>Create your workspace.</h1><p>Your account keeps your projects, partner and conversations together.</p></div>
+    <button id="google-register" class="google-btn"><span class="google-g">G</span> Continue with Google</button>
+    <div class="or"><span>or register with email</span></div>
+    <form id="register-form">
+      <label>Full name<input id="name" type="text" autocomplete="name" required placeholder="Your name"></label>
+      <label>Email<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label>Password<input id="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"></label>
+      <label>Confirm password<input id="confirm-password" type="password" autocomplete="new-password" required placeholder="Repeat password"></label>
+      <label class="check terms-check"><input id="terms" type="checkbox" required> I agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</label>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      <p class="form-message" id="auth-message"></p>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+</div>
+<script type="module" src="assets/js/auth.js"></script>
+</body></html>

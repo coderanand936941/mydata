@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+
+    match /users/{uid} {
+      allow read, create, update: if isOwner(uid);
+      allow delete: if false;
+    }
+
+    // Partner code lookup should ideally be mediated by trusted backend logic.
+    // If direct client lookup is enabled, expose only non-sensitive fields in these docs.
+    match /partnerCodes/{code} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    match /partners/{partnerId} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    // Add strict ownership/partner checks for projects, messages, payments, etc.
+    // Do not ship broad allow read/write rules to production.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

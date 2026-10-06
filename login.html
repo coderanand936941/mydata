@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in — Nexora</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body class="auth-page">
+<div class="auth-shell">
+  <a class="brand auth-brand" href="index.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="auth-card">
+    <div class="auth-heading"><span class="kicker">WELCOME BACK</span><h1>Sign in to your workspace.</h1><p>Continue your projects and conversations.</p></div>
+    <button id="google-login" class="google-btn"><span class="google-g">G</span> Continue with Google</button>
+    <div class="or"><span>or continue with email</span></div>
+    <form id="login-form">
+      <label>Email<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+      <div class="form-row"><label class="check"><input type="checkbox"> Remember me</label><a href="#" id="forgot-password">Forgot password?</a></div>
+      <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      <p class="form-message" id="auth-message"></p>
+    </form>
+    <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+  </div>
+  <p class="auth-note">Secure authentication powered by Firebase.</p>
+</div>
+<script type="module" src="assets/js/auth.js"></script>
+</body></html>

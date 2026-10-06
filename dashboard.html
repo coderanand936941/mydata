@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard — Nexora</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body class="app-page">
+<div class="app-layout">
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+    <nav><a class="active" href="dashboard.html">⌂ <span>Overview</span></a><a href="projects.html">▣ <span>Projects</span></a><a href="chat.html">◌ <span>Messages</span><b class="nav-count">3</b></a><a href="services.html">◇ <span>Services</span></a><a href="notifications.html">♢ <span>Notifications</span></a></nav>
+    <div class="sidebar-bottom"><a href="profile.html">⚙ <span>Profile</span></a><button id="logout">↪ <span>Sign out</span></button></div>
+  </aside>
+  <main class="app-main">
+    <header class="app-top"><button class="mobile-menu" id="mobile-menu">☰</button><div><span class="kicker">CLIENT WORKSPACE</span><h1 id="welcome-title">Good evening.</h1></div><div class="top-actions"><a class="icon-btn" href="notifications.html">♢<span class="notif-dot"></span></a><a class="user-chip" href="profile.html"><span class="avatar" id="user-avatar">U</span><span id="user-name">User</span></a></div></header>
+    <section class="welcome-banner"><div><span class="kicker">YOUR WORKSPACE</span><h2>Everything important, in one place.</h2><p>Track your projects, talk to your partner and stay on top of every milestone.</p></div><a class="btn btn-light" href="projects.html">View projects →</a></section>
+    <section class="metric-grid"><div class="metric"><span>Active projects</span><strong id="active-projects">02</strong><small>Currently in progress</small></div><div class="metric"><span>Pending actions</span><strong>03</strong><small>Need your attention</small></div><div class="metric"><span>Messages</span><strong>03</strong><small>Unread conversations</small></div><div class="metric"><span>Partner</span><strong id="partner-name">—</strong><small id="partner-status">Not connected</small></div></section>
+    <section class="dashboard-grid">
+      <div class="panel"><div class="panel-head"><div><span class="kicker">PROJECTS</span><h3>Recent work</h3></div><a href="projects.html">View all →</a></div>
+        <div class="project-row"><div class="project-icon">W</div><div class="project-info"><b>Business Website</b><span>Website Development</span></div><div class="project-progress"><div><span style="width:78%"></span></div><small>78%</small></div><span class="status-pill active">In progress</span></div>
+        <div class="project-row"><div class="project-icon">B</div><div class="project-info"><b>Brand Identity</b><span>Logo & Brand</span></div><div class="project-progress"><div><span style="width:100%"></span></div><small>100%</small></div><span class="status-pill done">Completed</span></div>
+      </div>
+      <div class="panel partner-panel"><div class="panel-head"><div><span class="kicker">YOUR PARTNER</span><h3 id="partner-title">Connect a partner</h3></div></div><div class="partner-person"><span class="large-avatar" id="partner-avatar">?</span><div><b id="partner-display">No partner assigned</b><span id="partner-role">Enter a partner code to connect.</span></div></div><a class="btn btn-outline btn-block" href="partner-code.html">Manage connection</a></div>
+    </section>
+    <section class="dashboard-grid lower"><div class="panel"><div class="panel-head"><div><span class="kicker">ACTIVITY</span><h3>Recent activity</h3></div></div><div class="timeline"><div><i></i><span><b>Project updated</b><small>Business Website · 2 hours ago</small></span></div><div><i></i><span><b>New message</b><small>Rahul Sharma sent a message · 4 hours ago</small></span></div><div><i></i><span><b>Quote accepted</b><small>Brand Identity · Yesterday</small></span></div></div></div>
+      <div class="panel"><div class="panel-head"><div><span class="kicker">QUICK ACTIONS</span><h3>What do you need?</h3></div></div><div class="quick-grid"><a href="services.html">Start a project <b>↗</b></a><a href="chat.html">Message partner <b>↗</b></a><a href="projects.html">View documents <b>↗</b></a><a href="profile.html">Account settings <b>↗</b></a></div></div></section>
+  </main>
+</div>
+<script type="module" src="assets/js/dashboard.js"></script>
+</body></html>
